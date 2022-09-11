@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8om-ZJ-abe">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Doc_controll_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXF-vJ-Rjn">
+                                <rect key="frame" x="140" y="448" width="148" height="72"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleSignInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="474-X4-OOF"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Q8-Do-a3f">
+                                <rect key="frame" x="0.0" y="929" width="484" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VXF-vJ-Rjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="Fh7-uc-adt"/>
+                            <constraint firstItem="VXF-vJ-Rjn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="360" id="W55-Ut-PTO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VXF-vJ-Rjn" secondAttribute="trailing" constant="140" id="XXE-cg-d4T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RCw-fD-38i"/>
+                    <connections>
+                        <outlet property="signInButton" destination="VXF-vJ-Rjn" id="0ez-PI-NbL"/>
+                        <segue destination="ORD-3s-74A" kind="show" identifier="afterLoginSegue" id="tGi-Xg-FdX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013.5514018691588" y="84.881209503239745"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="8ws-VS-9mC">
+            <objects>
+                <viewController id="ORD-3s-74A" customClass="homeViewController" customModule="Doc_controll_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GvJ-u3-xYv">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Documents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BI-DW-0mS">
+                                <rect key="frame" x="0.0" y="108" width="428" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Avb-pw-frC">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2J-de-mdS">
+                                <rect key="frame" x="0.0" y="172" width="428" height="90"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="DxX-uH-whv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Doc 1"/>
+                                <connections>
+                                    <action selector="doc1press:" destination="ORD-3s-74A" eventType="touchUpInside" id="ALq-8Y-JJc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6I9-r1-U5L">
+                                <rect key="frame" x="0.0" y="262" width="428" height="90"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="qkD-Ry-UVm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Doc 2"/>
+                                <connections>
+                                    <action selector="doc2press:" destination="ORD-3s-74A" eventType="touchUpInside" id="IWK-XF-rvH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nm3-4b-bIZ">
+                                <rect key="frame" x="0.0" y="352" width="428" height="90"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="ixp-zB-sh7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Doc 3"/>
+                                <connections>
+                                    <action selector="doc3press:" destination="ORD-3s-74A" eventType="touchUpInside" id="zDA-Ag-tYY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpY-rh-WZc">
+                                <rect key="frame" x="0.0" y="442" width="428" height="90"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="cJu-aK-cfC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Doc 4"/>
+                                <connections>
+                                    <action selector="doc4press:" destination="ORD-3s-74A" eventType="touchUpInside" id="vCY-Cv-fFd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYV-f9-ydV">
+                                <rect key="frame" x="0.0" y="532" width="428" height="90"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="GTE-gi-pMG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Doc 5"/>
+                                <connections>
+                                    <action selector="doc5press:" destination="ORD-3s-74A" eventType="touchUpInside" id="us5-jz-kKH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rD-Fr-5L2">
+                                <rect key="frame" x="0.0" y="622" width="428" height="90"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="HCQ-El-weU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Doc 6"/>
+                                <connections>
+                                    <action selector="doc6press:" destination="ORD-3s-74A" eventType="touchUpInside" id="KPd-ug-rK1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nt7-xC-tDH">
+                                <rect key="frame" x="0.0" y="712" width="428" height="90"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="A5k-Vd-YNk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Doc 7"/>
+                                <connections>
+                                    <action selector="doc7press:" destination="ORD-3s-74A" eventType="touchUpInside" id="hy7-pu-4gP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLF-o4-mG4">
+                                <rect key="frame" x="0.0" y="802" width="428" height="90"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="1uG-ii-XpL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Doc 8"/>
+                                <connections>
+                                    <action selector="doc8press:" destination="ORD-3s-74A" eventType="touchUpInside" id="w3H-qP-ycQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uwX-jf-bvv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nt7-xC-tDH" firstAttribute="leading" secondItem="uwX-jf-bvv" secondAttribute="leading" id="15b-fO-iON"/>
+                            <constraint firstItem="m2J-de-mdS" firstAttribute="leading" secondItem="uwX-jf-bvv" secondAttribute="leading" id="40B-xH-pxh"/>
+                            <constraint firstItem="nLF-o4-mG4" firstAttribute="leading" secondItem="uwX-jf-bvv" secondAttribute="leading" id="5YP-04-yFp"/>
+                            <constraint firstAttribute="trailing" secondItem="5BI-DW-0mS" secondAttribute="trailing" id="69Y-dn-PcQ"/>
+                            <constraint firstAttribute="trailing" secondItem="DpY-rh-WZc" secondAttribute="trailing" id="BQt-Xf-ghr"/>
+                            <constraint firstItem="6I9-r1-U5L" firstAttribute="leading" secondItem="uwX-jf-bvv" secondAttribute="leading" id="CMx-qg-05a"/>
+                            <constraint firstItem="5BI-DW-0mS" firstAttribute="leading" secondItem="uwX-jf-bvv" secondAttribute="leading" id="FfF-za-tmX"/>
+                            <constraint firstItem="Nm3-4b-bIZ" firstAttribute="leading" secondItem="uwX-jf-bvv" secondAttribute="leading" id="G6d-4q-SKV"/>
+                            <constraint firstItem="m2J-de-mdS" firstAttribute="top" secondItem="5BI-DW-0mS" secondAttribute="bottom" constant="5" id="Ijh-wS-R9b"/>
+                            <constraint firstItem="8rD-Fr-5L2" firstAttribute="leading" secondItem="uwX-jf-bvv" secondAttribute="leading" id="LsL-0K-tBl"/>
+                            <constraint firstItem="uwX-jf-bvv" firstAttribute="bottom" secondItem="nLF-o4-mG4" secondAttribute="bottom" id="Oe4-Pc-G5R"/>
+                            <constraint firstItem="6I9-r1-U5L" firstAttribute="top" secondItem="m2J-de-mdS" secondAttribute="bottom" id="VsX-Ec-aoD"/>
+                            <constraint firstAttribute="trailing" secondItem="m2J-de-mdS" secondAttribute="trailing" id="XO2-hE-mMF"/>
+                            <constraint firstItem="8rD-Fr-5L2" firstAttribute="top" secondItem="PYV-f9-ydV" secondAttribute="bottom" id="XbH-8A-ExT"/>
+                            <constraint firstAttribute="trailing" secondItem="6I9-r1-U5L" secondAttribute="trailing" id="Xty-pH-etV"/>
+                            <constraint firstAttribute="trailing" secondItem="PYV-f9-ydV" secondAttribute="trailing" id="Y0R-Mc-Q4y"/>
+                            <constraint firstItem="PYV-f9-ydV" firstAttribute="leading" secondItem="uwX-jf-bvv" secondAttribute="leading" id="aeg-Ow-Afs"/>
+                            <constraint firstItem="8rD-Fr-5L2" firstAttribute="trailing" secondItem="uwX-jf-bvv" secondAttribute="trailing" id="bOv-iI-GrM"/>
+                            <constraint firstAttribute="trailing" secondItem="nLF-o4-mG4" secondAttribute="trailing" id="c5n-LX-7HZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Nm3-4b-bIZ" secondAttribute="trailing" id="dH7-Fl-wPv"/>
+                            <constraint firstItem="DpY-rh-WZc" firstAttribute="leading" secondItem="uwX-jf-bvv" secondAttribute="leading" id="dLe-wy-MAo"/>
+                            <constraint firstItem="nLF-o4-mG4" firstAttribute="top" secondItem="nt7-xC-tDH" secondAttribute="bottom" id="iJN-AZ-eZQ"/>
+                            <constraint firstItem="Nm3-4b-bIZ" firstAttribute="top" secondItem="m2J-de-mdS" secondAttribute="bottom" constant="90" id="ioj-lI-oNi"/>
+                            <constraint firstItem="DpY-rh-WZc" firstAttribute="top" secondItem="Nm3-4b-bIZ" secondAttribute="bottom" id="pH4-jE-azg"/>
+                            <constraint firstItem="PYV-f9-ydV" firstAttribute="top" secondItem="DpY-rh-WZc" secondAttribute="bottom" id="s4T-T0-ZmO"/>
+                            <constraint firstItem="nt7-xC-tDH" firstAttribute="trailing" secondItem="uwX-jf-bvv" secondAttribute="trailing" id="u4w-Hk-pch"/>
+                            <constraint firstItem="nt7-xC-tDH" firstAttribute="top" secondItem="8rD-Fr-5L2" secondAttribute="bottom" id="x6Z-hc-pIN"/>
+                            <constraint firstItem="5BI-DW-0mS" firstAttribute="top" secondItem="uwX-jf-bvv" secondAttribute="top" constant="20" id="xfQ-hP-hvG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5iM-jS-8Fg"/>
+                    <connections>
+                        <outlet property="Doc1" destination="m2J-de-mdS" id="wSm-jh-Hcb"/>
+                        <outlet property="Doc2" destination="6I9-r1-U5L" id="4Su-eQ-FAn"/>
+                        <outlet property="Doc3" destination="Nm3-4b-bIZ" id="xtC-yA-npd"/>
+                        <outlet property="Doc4" destination="DpY-rh-WZc" id="cT4-zl-xu4"/>
+                        <outlet property="Doc5" destination="PYV-f9-ydV" id="WvL-HL-r9c"/>
+                        <outlet property="Doc6" destination="8rD-Fr-5L2" id="ZRt-nE-IJs"/>
+                        <outlet property="Doc7" destination="nt7-xC-tDH" id="IaK-E3-Rzk"/>
+                        <outlet property="Doc8" destination="nLF-o4-mG4" id="KCF-dK-YXi"/>
+                        <outlet property="opacityView" destination="Avb-pw-frC" id="QaI-Gr-PWe"/>
+                        <segue destination="dVQ-n8-jeI" kind="show" identifier="showDoc" id="DI5-Dn-RRK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJf-k3-dZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.4205607476636" y="83.585313174946009"/>
+        </scene>
+        <!--Doc View Controller-->
+        <scene sceneID="JUy-YF-dpy">
+            <objects>
+                <viewController id="dVQ-n8-jeI" customClass="docViewController" customModule="Doc_controll_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Wf-uO-pQT">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q5t-Fv-g2e">
+                                <rect key="frame" x="0.0" y="123" width="428" height="738"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g8l-up-tQE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g8l-up-tQE" firstAttribute="bottom" secondItem="q5t-Fv-g2e" secondAttribute="bottom" constant="31" id="DbP-4R-uVf"/>
+                            <constraint firstItem="q5t-Fv-g2e" firstAttribute="trailing" secondItem="g8l-up-tQE" secondAttribute="trailing" id="Vjc-ER-2Fc"/>
+                            <constraint firstItem="q5t-Fv-g2e" firstAttribute="leading" secondItem="g8l-up-tQE" secondAttribute="leading" id="e4S-M3-A0E"/>
+                            <constraint firstItem="q5t-Fv-g2e" firstAttribute="top" secondItem="g8l-up-tQE" secondAttribute="top" constant="35" id="om9-lg-md3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pJv-ey-5T5"/>
+                    <connections>
+                        <outlet property="imageView" destination="q5t-Fv-g2e" id="ugl-Eh-B1S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFo-5Z-UJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2632.7102803738317" y="83.585313174946009"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NlS-Tv-n6g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8om-ZJ-abe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UA0-0S-smQ">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4YA-Kt-gLo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mU0-t0-bf0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.55140186915887" y="84.881209503239745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
