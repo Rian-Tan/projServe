@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1043455593007",
+    "project_id": "project-yeoland-b610a",
+    "storage_bucket": "project-yeoland-b610a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043455593007:android:f14045abc5747f358554da",
+        "android_client_info": {
+          "package_name": "com.workingcompany.seeker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043455593007-hevph4thv3218lthe9di603084aur3gb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpDfFUTRieOvgiDzmfAYe0c9JVPcH6CGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043455593007-hevph4thv3218lthe9di603084aur3gb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1043455593007-0m48367qpllq74280de3e9pm3lmue8kp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.workingcompany.seeker"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
