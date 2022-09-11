@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //button
-        signInButton.layer.cornerRadius = 15
+        signInButton.layer.cornerRadius = 20
         
         //change background
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
