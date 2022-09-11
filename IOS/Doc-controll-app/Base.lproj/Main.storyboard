@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXF-vJ-Rjn">
-                                <rect key="frame" x="140" y="448" width="148" height="72"/>
+                                <rect key="frame" x="102" y="490" width="224" height="72"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -37,13 +37,22 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCJ-jY-vCn">
+                                <rect key="frame" x="0.0" y="239" width="428" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VXF-vJ-Rjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="Fh7-uc-adt"/>
-                            <constraint firstItem="VXF-vJ-Rjn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="360" id="W55-Ut-PTO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VXF-vJ-Rjn" secondAttribute="trailing" constant="140" id="XXE-cg-d4T"/>
+                            <constraint firstItem="SCJ-jY-vCn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A68-hd-zt7"/>
+                            <constraint firstItem="VXF-vJ-Rjn" firstAttribute="top" secondItem="SCJ-jY-vCn" secondAttribute="bottom" constant="191" id="Gap-x7-B6Q"/>
+                            <constraint firstItem="VXF-vJ-Rjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="Qrs-Kp-LSI"/>
+                            <constraint firstItem="VXF-vJ-Rjn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="402" id="RWp-2W-WIa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VXF-vJ-Rjn" secondAttribute="trailing" constant="102" id="Wa0-IS-4kl"/>
+                            <constraint firstItem="SCJ-jY-vCn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dFp-K0-oWd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RCw-fD-38i"/>
