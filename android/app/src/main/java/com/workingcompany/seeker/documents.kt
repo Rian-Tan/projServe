@@ -51,7 +51,7 @@ class documents : AppCompatActivity() {
         var adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, docslist)
         val listView: ListView = findViewById(R.id.listView)
         val docRef = db.collection("test").document(email)
-
+        val textView3: TextView = findViewById(R.id.textView3)
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {
@@ -104,7 +104,7 @@ class documents : AppCompatActivity() {
                 frame.visibility = View.VISIBLE
                 val url = URL(it.toString())
                 urlToImageView(docView,url)
-                Toast.makeText(this, ":)", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Loading... :)", Toast.LENGTH_LONG).show()
                 docView.visibility = View.VISIBLE
 
                 close.visibility = View.VISIBLE
