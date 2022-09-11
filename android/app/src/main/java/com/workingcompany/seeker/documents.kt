@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.*
+import androidx.core.content.ContextCompat
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.FirebaseApp
 import com.google.firebase.appcheck.FirebaseAppCheck
@@ -114,6 +115,11 @@ class documents : AppCompatActivity() {
                     frame.visibility = View.GONE
                     close.visibility = View.GONE
                     listView.visibility = View.VISIBLE
+                    docView.setImageDrawable(
+                        ContextCompat.getDrawable(
+                        applicationContext,
+                        R.drawable.ic_launcher_foreground
+                    ))
                 }
             }.addOnFailureListener {
                 // Handle any errors
